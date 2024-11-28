@@ -1,2 +1,2 @@
-Tecno Pova LD7j Device tree.
+# Tecno Pova LD7j - Team Win Recovery Project
 Example that i used for this device tree: https://github.com/Galaxy-MT6768/android_device_samsung_a31nsxx
