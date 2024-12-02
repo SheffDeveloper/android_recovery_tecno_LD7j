@@ -91,7 +91,7 @@ BOARD_MAIN_SIZE := 6106906624
 BOARD_MAIN_PARTITION_LIST := system vendor product
 
 # System as root
-# BOARD_ROOT_EXTRA_FOLDERS := cache carrier data_mirror efs keyrefuge linkerconfig metadata omr optics prism spu # - Needs to be edit later
+BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -141,12 +141,18 @@ TWRP_INCLUDE_LOGCAT := true
 TW_USE_NEW_MINADBD := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-# TW_EXTRA_LANGUAGES := true
+TW_EXTRA_LANGUAGES := false
+TW_DEFAULT_LANGUAGE := en
 TARGET_USES_MKE2FS := true
 TW_NO_LEGACY_PROPS := true
 TW_NO_BIND_SYSTEM := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_HAS_MTP := true
 TW_MTP_DEVICE := "Tecno Pova LD7J"
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 
 # Making the recovery.img smaller
 BOARD_HAS_NO_REAL_SDCARD := true
